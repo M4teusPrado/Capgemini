@@ -13,7 +13,7 @@ public class AnuncioController {
         System.out.println("-=-=-=-=-=-=-=-= Seja bem vindo -=-=-=-=-=-=-=-=");
        
         do {
-            System.out.println("\n [1] Cadastrar ununcio\n [2] Buscar anuncio\n [3] Sair\n");
+            System.out.println("\n [1] Cadastrar aununcio\n [2] Buscar anuncio\n [3] Sair\n");
             
             System.out.println("\t\nDigite a operação desejada: ");
             op = Integer.parseInt(s.nextLine());
