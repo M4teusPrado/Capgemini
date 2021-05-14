@@ -25,6 +25,13 @@ public class Relatorio{
         this.qtd_max_compartilhamento += qtd_max_compartilhamento;
     }
 
+    public void multiplicaValoresPeloPerido(long diferencaEmDias) {
+        this.qtd_max_visualizacoes *= diferencaEmDias;
+        this.qtd_max_clicks *= diferencaEmDias;
+        this.qtd_max_compartilhamento += qtd_max_compartilhamento;
+        
+    }
+
     public Relatorio() {}
 
     public Relatorio(int qtd_max_visualizacoes, int qtd_max_clicks, int qtd_max_compartilhamento) {

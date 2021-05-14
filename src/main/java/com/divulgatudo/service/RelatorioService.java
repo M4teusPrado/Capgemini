@@ -7,11 +7,16 @@ public class RelatorioService {
     
     public Anuncio criar_relatorio(Anuncio anuncio){
         Relatorio relatorio = new Relatorio();
-
+    
         int visualizacoes = (int) (anuncio.getInvestimento_dia() * 30);
         relatorio.aumentaQtd_max_visualizacoes( visualizacoes );
-        
-        anuncio.setRelatorio(sub_totais(relatorio, visualizacoes, 4));
+       
+        // 1 dia = 86400000 milisegundos (24 * 60 * 60 * 1000).
+        long diferencaEmDias = (anuncio.getData_termino().getTime() - anuncio.getData_inicio().getTime()) / 86400000L;
+
+        sub_totais(relatorio, visualizacoes, 4);
+        relatorio.multiplicaValoresPeloPerido(diferencaEmDias);
+        anuncio.setRelatorio(relatorio);
         return anuncio;
     }
 
