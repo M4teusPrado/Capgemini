@@ -3,6 +3,7 @@ package com.divulgatudo.service;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.List;
 import java.util.Scanner;
 
 import com.divulgatudo.model.Anuncio;
@@ -41,7 +42,7 @@ public class AnuncioService {
             System.out.println("\nValor invalido!\n\tValor digitado menor que R$ 0 \n\nDigite o investimento: ");   
         }
 
-        relatorioService.criarRelatorio(anuncio);
+        relatorioService.criar_relatorio(anuncio);
         repository.salvar(anuncio);
     }
 
@@ -90,7 +91,22 @@ public class AnuncioService {
                 return false;
             }   
         }while(true);
+    }
 
+    public List<Anuncio> relatorioPorCliente() {
+        System.out.println("Digite o nome do cliente");
+        String nome = s.nextLine();
+        return repository.obterAnuncioPorCliente(nome);
+    }
+
+
+    public List<Anuncio> relatorioPorPerido() {
+        return null;
+    }
+
+
+    public List<Anuncio> relatorioPorClienteEPerido() {
+        return null;
     }
    
 }

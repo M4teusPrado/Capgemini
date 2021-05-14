@@ -5,15 +5,7 @@ import com.divulgatudo.model.Relatorio;
 
 public class RelatorioService {
     
-    //A cada 100 pessoas que visualizam o anúncio 12 clicam nele.
-    //A cada 20 pessoas que clicam no anúncio 3 compartilham nas redes sociais.
-    //Cada compartilhamento nas redes sociais gera 40 novas visualizações.
-    //30 pessoas visualizam o anúncio original (não compartilhado) a cada R$ 1,00 investido.
-    //O mesmo anúncio é compartilhado no máximo 4 vezes em sequência
-    //(1ª pessoa -> compartilha -> 2ª pessoa -> compartilha - > 3ª pessoa -> compartilha -> 4ª pessoa)
-
-    
-    public Anuncio criarRelatorio(Anuncio anuncio){
+    public Anuncio criar_relatorio(Anuncio anuncio){
         Relatorio relatorio = new Relatorio();
 
         int visualizacoes = (int) (anuncio.getInvestimento_dia() * 30);
