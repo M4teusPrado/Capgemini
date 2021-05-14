@@ -29,6 +29,8 @@ public class AnuncioController {
             } 
             else if ( op == 2){
                 filtro();
+            } else if ( op != 3) {
+                System.out.println("Ação não encontrada");
             }
         } while (op != 3);  
         s.close();
@@ -52,7 +54,17 @@ public class AnuncioController {
         }
     }
 
-    private static void exibe_relatorio(List<Anuncio> relatorios) {
-        System.out.println(relatorios);
+    private static void exibe_relatorio(List<Anuncio> anuncios) {
+        System.out.println("-=-=-=-=-=-=- Relatorio =-=-=-=-=-=-=-=\n");
+
+        for (Anuncio anuncio : anuncios) {
+
+            System.out.println("=-=-=-=-=-=-=-=--=-=-=");
+            System.out.println("Total investido: " + anuncio.getInvestimento_dia() +"\n");
+            System.out.println("Quantidade maxima de visualizações: " + anuncio.getRelatorio().getQtd_max_visualizacoes() +"\n");
+            System.out.println("Quantidade maxima de cliques: " + anuncio.getRelatorio().getQtd_max_clicks() +"\n");
+            System.out.println("Quantidade maxima de compartilhamentos: " + anuncio.getRelatorio().getQtd_max_compartilhamento() +"\n\n");
+        }
+        
     }
 }
