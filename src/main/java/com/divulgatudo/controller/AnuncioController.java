@@ -2,7 +2,7 @@ package com.divulgatudo.controller;
 
 import java.util.Scanner;
 
-import com.divulgatudo.service.CadastrarAnuncio;
+import com.divulgatudo.service.AnuncioService;
 
 public class AnuncioController {
     public static void main(String[] args) {
@@ -30,8 +30,8 @@ public class AnuncioController {
         s.close();
     }
 
-    public static Boolean cadastrarAnuncio() {
-        CadastrarAnuncio service = new CadastrarAnuncio();
-        return service.cadastrarAnuncio();
+    public static void cadastrarAnuncio() {
+        AnuncioService service = new AnuncioService();
+        service.cadastrarAnuncio(); 
     }
 }

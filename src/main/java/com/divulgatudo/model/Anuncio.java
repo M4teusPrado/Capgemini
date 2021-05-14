@@ -10,6 +10,8 @@ public class Anuncio {
     private Date data_inicio;
     private Date data_termino;
     private Double investimento_dia;
+    
+    private Relatorio relatorio;
 
     public Long getId_anuncio() {
         return id_anuncio;
@@ -44,10 +46,16 @@ public class Anuncio {
     public double getInvestimento_dia() {
         return investimento_dia;
     }
-    public void setInvestimento_dia(double investimento_dia) {
+    public void setInvestimento_dia(Double investimento_dia) {
         this.investimento_dia = investimento_dia;
     }
 
+    public Relatorio getRelatorio() {
+        return relatorio;
+    }
+    public void setRelatorio(Relatorio relatorio) {
+        this.relatorio = relatorio;
+    }
     public Anuncio() { }
 
     public Anuncio(
@@ -56,7 +64,8 @@ public class Anuncio {
                     String cliente, 
                     Date data_inicio, 
                     Date data_termino,
-                    Double investimento_dia
+                    Double investimento_dia,
+                    Relatorio relatorio
                 ){
         this.id_anuncio = id_anuncio;
         this.nome_do_anuncio = nome_do_anuncio;
@@ -64,6 +73,7 @@ public class Anuncio {
         this.data_inicio = data_inicio;
         this.data_termino = data_termino;
         this.investimento_dia = investimento_dia;
+        this.relatorio = relatorio;
     }
 
     @Override
@@ -89,4 +99,6 @@ public class Anuncio {
             return false;
         return true;
     }
+
+
 }

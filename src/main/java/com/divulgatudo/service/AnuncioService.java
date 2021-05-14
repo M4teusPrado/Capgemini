@@ -6,12 +6,16 @@ import java.util.Date;
 import java.util.Scanner;
 
 import com.divulgatudo.model.Anuncio;
+import com.divulgatudo.repository.AnuncioRepository;
 
-public class CadastrarAnuncio {
+public class AnuncioService {
 
     Scanner s = new Scanner(System.in);
+
+    AnuncioRepository repository = new AnuncioRepository();
+    RelatorioService relatorioService = new RelatorioService();
     
-    public Boolean cadastrarAnuncio() {
+    public void cadastrarAnuncio() {
         Anuncio anuncio = new Anuncio();
 
         System.out.println("\t\nDigite o nome do anuncio: ");
@@ -37,7 +41,8 @@ public class CadastrarAnuncio {
             System.out.println("\nValor invalido!\n\tValor digitado menor que R$ 0 \n\nDigite o investimento: ");   
         }
 
-        return true;
+        relatorioService.criarRelatorio(anuncio);
+        repository.salvar(anuncio);
     }
 
 
