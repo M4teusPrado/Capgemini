@@ -9,7 +9,7 @@ public class Anuncio {
     private String cliente;
     private Date data_inicio;
     private Date data_termino;
-    private float investimento_dia;
+    private Double investimento_dia;
 
     public Long getId_anuncio() {
         return id_anuncio;
@@ -41,10 +41,10 @@ public class Anuncio {
     public void setData_termino(Date data_termino) {
         this.data_termino = data_termino;
     }
-    public float getInvestimento_dia() {
+    public double getInvestimento_dia() {
         return investimento_dia;
     }
-    public void setInvestimento_dia(float investimento_dia) {
+    public void setInvestimento_dia(double investimento_dia) {
         this.investimento_dia = investimento_dia;
     }
 
@@ -56,7 +56,7 @@ public class Anuncio {
                     String cliente, 
                     Date data_inicio, 
                     Date data_termino,
-                    float investimento_dia
+                    Double investimento_dia
                 ){
         this.id_anuncio = id_anuncio;
         this.nome_do_anuncio = nome_do_anuncio;

@@ -21,8 +21,12 @@ public class AnuncioController {
             if( op == 1){
                 System.out.println("Cadastrar um anuncio");
                 cadastrarAnuncio();
+            } else if ( op == 2) {
+                System.out.println("Buscar anuncio");
+
             }
         } while (op != 3);
+        
         s.close();
     }
 
