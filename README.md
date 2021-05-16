@@ -74,7 +74,7 @@ Agora bastar apertar com o botão direito do mouse em sua interface, e clicar em
 
 ### Arquitetura do projeto
 
-![Diagrama de camadas](https://user-images.githubusercontent.com/59894662/118381716-4e7d8b00-b5c4-11eb-91e3-1179abeaa625.png)
+![Diagrama de camadas (1)](https://user-images.githubusercontent.com/59894662/118381751-9b616180-b5c4-11eb-94d8-e2e29b5ef818.png)
 
 Controller: Recebe requisições do usuário e repassa ao service
 
