@@ -1,3 +1,5 @@
+# Documentação
+
 ## Requisitos para compilação
 
 Clonar repositorio
@@ -72,7 +74,7 @@ Agora bastar apertar com o botão direito do mouse em sua interface, e clicar em
 
 ### Arquitetura do projeto
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6c531183-66d8-4660-9853-ee5e73155384/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/6c531183-66d8-4660-9853-ee5e73155384/Untitled.png)
+![Diagrama de camadas](https://user-images.githubusercontent.com/59894662/118381716-4e7d8b00-b5c4-11eb-91e3-1179abeaa625.png)
 
 Controller: Recebe requisições do usuário e repassa ao service
 
@@ -84,6 +86,7 @@ Repository: Tem como funcionalidade salvar armazenar entidades
 
 ### Relacionamento de entidades
 
-![https://s3-us-west-2.amazonaws.com/secure.notion-static.com/aba7ae9d-35c9-4966-9369-01ca90ce17b4/Untitled.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/aba7ae9d-35c9-4966-9369-01ca90ce17b4/Untitled.png)
+![Modelo ER](https://user-images.githubusercontent.com/59894662/118381720-55a49900-b5c4-11eb-8cd8-ce4e67fb889f.png)
+
 
 De forma pratica, cada anuncio possuiu um relatório com informações de visualizações, cliques e compartilhamentos.
